@@ -121,7 +121,7 @@
       .prompt-card h3 { margin-bottom: 12px; font-size: 1.75rem; letter-spacing: -.06em; line-height: 1; }
       .prompt-card p { margin: 0; color: rgba(251,252,249,.78); font-size: .82rem; line-height: 1.6; }
       .prompt-box { position: relative; border: 1px solid rgba(251,252,249,.35); background: rgba(19,33,44,.26); }
-      .prompt-box pre { overflow: auto; margin: 0; padding: 21px; padding-right: 80px; color: var(--white); font-family: var(--mono); font-size: .73rem; line-height: 1.65; white-space: pre-wrap; }
+      .prompt-box pre { max-height: 580px; overflow: auto; margin: 0; padding: 21px; padding-right: 80px; color: var(--white); font-family: var(--mono); font-size: .73rem; line-height: 1.65; white-space: pre-wrap; }
       .prompt-box .copy-button { position: absolute; top: 13px; right: 13px; }
 
       .publish-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -187,7 +187,7 @@
         .feature { min-height: 0; padding: 20px; }
         .feature-index { margin-bottom: 34px; }
         .prompt-card { padding: 22px; }
-        .prompt-box pre { padding: 16px; padding-top: 55px; }
+        .prompt-box pre { max-height: 520px; padding: 16px; padding-top: 55px; }
         .command { grid-template-columns: 1fr; gap: 7px; }
         .footer-inner { align-items: flex-start; flex-direction: column; }
       }
@@ -270,7 +270,7 @@
       </section>
 
       <section class="shell signal-row" aria-label="模板摘要">
-        <div class="signal"><strong>静态优先</strong><span>构建后就是可部署的 dist，适合 GitHub Pages 和 Cloudflare Pages。</span></div>
+        <div class="signal"><strong>静态优先</strong><span>构建后就是可部署的 dist，适合 GitHub Pages 和 Cloudflare Workers Static Assets。</span></div>
         <div class="signal"><strong>图片有流水线</strong><span>Sharp 生成多格式、多尺寸和低清占位，原图不直接进入线上。</span></div>
         <div class="signal"><strong>AI 有边界</strong><span>Skill 负责流程，脚本负责确定性，提示词只描述本次内容。</span></div>
       </section>
@@ -284,7 +284,7 @@
           <article class="flow-step"><span class="flow-number">01 / BRIEF</span><h3>说清楚主题</h3><p>给网站名称、主题、图片目录和想要的气质。其他字段可以使用默认值。</p></article>
           <article class="flow-step"><span class="flow-number">02 / INGEST</span><h3>放入原图</h3><p>原图进入 <code>incoming/</code>，配置文件记录栏目、排序和描述。</p></article>
           <article class="flow-step"><span class="flow-number">03 / VERIFY</span><h3>构建与检查</h3><p>处理媒体、生成 manifest，检查引用、alt、产物体积和页面结构。</p></article>
-          <article class="flow-step"><span class="flow-number">04 / SHIP</span><h3>选择一个平台</h3><p>GitHub Pages 或 Cloudflare Pages。账号授权始终由你掌握。</p></article>
+          <article class="flow-step"><span class="flow-number">04 / SHIP</span><h3>选择一个平台</h3><p>GitHub Pages 或 Cloudflare Workers Static Assets。账号授权始终由你掌握。</p></article>
         </div>
       </section>
 
@@ -330,17 +330,70 @@
 
       <section class="shell section" aria-labelledby="prompt-title">
         <div class="section-header">
-          <div><div class="section-rule"></div><h2 class="section-title" id="prompt-title">让 AI 读懂<br />你的意图</h2></div>
-          <p class="section-intro">启动提示词保持短小。真正的规则在仓库内，换一个模型或换一次对话，流程也不会丢。</p>
+          <div><div class="section-rule"></div><h2 class="section-title" id="prompt-title">AI 一键<br />生成网站</h2></div>
+          <p class="section-intro">把主题、图片目录和发布目标填进 Prompt，AI 就能整理内容、生成配置、处理图片、运行检查并启动预览。发布动作仍然需要你的明确授权。</p>
         </div>
         <div class="prompt-card">
-          <div><h3>从一句话开始</h3><p>把主题、图片位置、站点名和发布目标告诉 AI。缺少账号时，AI 应该停在授权边界前。</p></div>
+          <div><h3>把手动步骤交给 AI</h3><p>右侧是完整可复制版本。它会先读取仓库规则，再扫描图片并修改源配置；不会手工改 manifest，也不会擅自 push、改 DNS 或部署。</p></div>
           <div class="prompt-box">
             <button class="copy-button" type="button" data-copy-target="prompt-text">复制</button>
-            <pre id="prompt-text">请使用 $build-gallery skill 处理这个图片画廊仓库。
-主题：城市夜行摄影；图片位于：incoming/night-walk；站点名：城市夜行。
-请自动整理栏目、生成简短文案和准确 alt，运行 ingest、validate、check、test 和 build。
-完成桌面与移动端预览检查后，部署到 GitHub Pages；缺少外部账号参数时再询问我。</pre>
+            <pre id="prompt-text">你是一个负责内容整理、图片处理和静态网站交付的工程师。请基于当前的 image-gallery-template 仓库，把我提供的图片和主题整理成一个可以本地预览、可验证、可发布的图片网站。
+
+【项目输入】
+- 仓库或本地项目目录：（仓库 URL 或当前目录）
+- 网站主题：（例如：四季山野、建筑摄影、产品作品集）
+- 图片目录：（例如：incoming/seasonal/；如果图片已经在 incoming/，先扫描它）
+- 网站标题：（可留空，由你根据主题提出 2 个候选）
+- 网站语言：（zh-CN / en / 其他）
+- 栏目要求：（可留空；请根据图片内容建议栏目）
+- 是否允许下载：（是/否）
+- 是否允许分享：（是/否）
+- Umami 网站 ID：（可留空；留空就关闭统计，不要编造 ID）
+- 目标域名：（可留空）
+- 发布目标：（只本地 / GitHub Pages / Cloudflare / 两者分开确认）
+- 是否允许外部发布：（是/否；没有明确写“是”时不得 push、创建仓库、修改 DNS 或部署）
+
+【先读再做】
+1. 先读取 AGENTS.md、README.md、.agents/skills/build-gallery/SKILL.md、content/site.yml、content/collections.yml 和 content/images.yml。
+2. 检查图片目录、文件格式、尺寸和现有配置。不要凭空编造图片中的人物、地点、时间、版权、品牌或其他事实。
+3. 如果缺少的信息不会阻塞构建，可以根据文件名和可见内容提出合理草案，并在最终报告中标记“待确认”；如果缺少图片版权、目标账号或明确的外部发布授权，必须先停下来提问。
+
+【要完成的工作】
+1. 将原图保留在 incoming/，不要把原图复制到 public/ 或 dist/。
+2. 根据主题和图片内容规划栏目，更新 content/collections.yml。
+3. 更新 content/site.yml：标题、描述、语言、下载/分享开关、布局批次、缩略图和大图宽度、AVIF/WebP/JPEG 质量。
+4. 更新 content/images.yml：为每张图片填写准确的 source、collection、非空 alt 和可验证的 caption。source 必须与 incoming/ 下的实际相对路径完全一致。
+5. 如果提供了 Umami 网站 ID，配置 PUBLIC_UMAMI_SCRIPT_URL、PUBLIC_UMAMI_WEBSITE_ID 和 PUBLIC_UMAMI_DOMAINS；不要提交 .env、token、密码或其他 secret。没有完整配置时保持统计关闭。
+6. 不要手工编辑 public/media/、src/data/manifest.json 或其他 ingest 生成物。
+
+【必须执行的检查顺序】
+npm ci（如果依赖尚未安装）
+npm run ingest
+npm run validate
+npm run check
+npm test
+npm run build
+
+如果任何命令失败，先定位原因并修复源文件或 YAML 配置，再从失败步骤重新执行。不要通过手工修改 manifest 或删除无关文件来绕过校验。
+
+【预览和验收】
+启动 npm run dev 或 npm run preview，并告诉我本地访问地址。检查首屏图片、栏目筛选、灯箱、Esc/左右方向键、触摸操作、下载/分享开关、移动端布局、响应式图片请求和浏览器控制台 404。确认原图没有进入 dist/，且后续图片使用懒加载。
+
+【发布规则】
+- 发布目标为空或“只本地”：只完成构建和预览，不执行外部写入。
+- GitHub Pages：确认仓库名、master 分支、Pages 的 GitHub Actions 设置和 PUBLIC_BASE_PATH；只有得到明确授权后才 push 或触发发布。
+- Cloudflare：确认 wrangler.toml 的 Worker 名称、域名和登录状态；只有得到明确授权后才执行 deploy。不要自行修改 DNS 或绑定陌生域名。
+- 如果两个平台都要发布：先完成并验证一个平台，再单独确认第二个平台；不要同时启用两条自动部署工作流。
+- 即使用户提供了域名，也不能把域名、账号、token 或 secret 写进内容配置和生成物。
+
+【最终报告格式】
+请用简洁的中文报告：
+1. 生成的站点标题、栏目数量和图片数量。
+2. 修改了哪些源文件；哪些文件是自动生成物。
+3. ingest、validate、check、test、build 的结果。
+4. 本地预览地址。
+5. 如果已获授权并发布：GitHub、GitHub Pages、Cloudflare 的 URL 和部署结果。
+6. 仍需我确认的版权、描述、域名、Umami 或发布事项。</pre>
             <p class="copy-status" data-copy-status aria-live="polite"></p>
           </div>
         </div>
@@ -353,7 +406,7 @@
         </div>
         <div class="publish-grid">
           <article class="publish-card"><h3>GitHub Pages</h3><p>适合开源项目和个人站点。工作流默认手动触发，仓库名会自动成为 base path。</p><code>Settings → Pages → GitHub Actions</code></article>
-          <article class="publish-card"><h3>Cloudflare Pages</h3><p>适合需要全球边缘网络和分支预览的静态站点。只提供项目名，不把 token 写入代码。</p><code>npm run deploy:cloudflare -- --project-name your-site</code></article>
+          <article class="publish-card"><h3>Cloudflare Workers Static Assets</h3><p>把 dist/ 作为静态资源托管，并可绑定自己的域名。登录状态和 token 不写入代码。</p><code>npm run deploy:cloudflare</code></article>
         </div>
       </section>
 
