@@ -1,0 +1,19 @@
+title: "光影画廊"
+description: "一个面向图片内容的轻量、快速、可访问画廊。"
+language: "zh-CN"
+features:
+  download: true
+  share: true
+layout:
+  mode: "grid"
+  batchSize: 24
+  maxOutputBytes: 50000000
+  thumbWidths: [480, 768]
+  detailWidths: [960, 1440, 1920, 2560]
+  quality:
+    avif: 55
+    webp: 78
+    jpeg: 84
+analytics:
+  enabled: true
+  provider: "umami"

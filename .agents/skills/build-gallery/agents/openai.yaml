@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Gallery"
+  short_description: "Build and publish an AI-native image gallery"
+  default_prompt: "Use $build-gallery to turn a collection of images into a validated, accessible gallery and choose a deployment target."

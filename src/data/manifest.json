@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "generatedBy": "image-gallery-template",
+  "processingSignature": "{\"pipeline\":1,\"widths\":{\"thumb\":[480,768],\"detail\":[960,1440,1920,2560]},\"quality\":{\"avif\":55,\"webp\":78,\"jpeg\":84}}",
+  "collections": [
+    "featured",
+    "details"
+  ],
+  "images": [
+    {
+      "id": "image-sample-amber-fern",
+      "slug": "sample-amber-fern",
+      "source": "sample/amber-fern.svg",
+      "sourceHash": "6c451fc2ba81c69ef1c4d94f24b0076fbaecfc95e905fb922ea3a14c37d028b8",
+      "width": 1500,
+      "height": 1100,
+      "format": "svg",
+      "collection": "details",
+      "alt": "暖色背景上的抽象蕨叶",
+      "caption": "琥珀蕨叶",
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wgARCAAXACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAwABBAL/xAAYAQACAwAAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAABzoNM9/gXMOZamsKmf//EABoQAAIDAQEAAAAAAAAAAAAAAAEhAAISETH/2gAIAQEAAQUC461BnEasFhEeEvT3NrT/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEP/aAAgBAwEBPwHBlv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEP/aAAgBAgEBPwHEgv/EABgQAAIDAAAAAAAAAAAAAAAAAAEgABFR/9oACAEBAAY/AlsGDG//xAAaEAADAQEBAQAAAAAAAAAAAAAAASFxEUGh/9oACAEBAAE/IVbRBKNOXzzsINKdPOF8KY4iiOy6K+ighEOen//aAAwDAQACAAMAAAAQhu+A/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxBUORqdkyTL/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAhEf/aAAgBAgEBPxB1jHI+x9v/xAAfEAEAAgEEAwEAAAAAAAAAAAABABFhITFBUXGBsfD/2gAIAQEAAT8QO+uUtLD2bS7VaUat5ReU00hCZQFxXh1GMfvZF9A9jW73iEjCU+V9llJqTgCW+N9n/9k=",
+      "variants": {
+        "thumb": {
+          "avif": [
+            {
+              "width": 480,
+              "height": 352,
+              "src": "/media/sample-amber-fern/thumb-480.avif",
+              "format": "avif",
+              "bytes": 3958
+            },
+            {
+              "width": 768,
+              "height": 563,
+              "src": "/media/sample-amber-fern/thumb-768.avif",
+              "format": "avif",
+              "bytes": 5933
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/thumb-1500.avif",
+              "format": "avif",
+              "bytes": 11137
+            }
+          ],
+          "webp": [
+            {
+              "width": 480,
+              "height": 352,
+              "src": "/media/sample-amber-fern/thumb-480.webp",
+              "format": "webp",
+              "bytes": 6126
+            },
+            {
+              "width": 768,
+              "height": 563,
+              "src": "/media/sample-amber-fern/thumb-768.webp",
+              "format": "webp",
+              "bytes": 10788
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/thumb-1500.webp",
+              "format": "webp",
+              "bytes": 24560
+            }
+          ],
+          "jpeg": [
+            {
+              "width": 480,
+              "height": 352,
+              "src": "/media/sample-amber-fern/thumb-480.jpg",
+              "format": "jpeg",
+              "bytes": 12171
+            },
+            {
+              "width": 768,
+              "height": 563,
+              "src": "/media/sample-amber-fern/thumb-768.jpg",
+              "format": "jpeg",
+              "bytes": 25786
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/thumb-1500.jpg",
+              "format": "jpeg",
+              "bytes": 57993
+            }
+          ]
+        },
+        "detail": {
+          "avif": [
+            {
+              "width": 960,
+              "height": 704,
+              "src": "/media/sample-amber-fern/detail-960.avif",
+              "format": "avif",
+              "bytes": 7436
+            },
+            {
+              "width": 1440,
+              "height": 1056,
+              "src": "/media/sample-amber-fern/detail-1440.avif",
+              "format": "avif",
+              "bytes": 10530
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/detail-1500.avif",
+              "format": "avif",
+              "bytes": 11137
+            }
+          ],
+          "webp": [
+            {
+              "width": 960,
+              "height": 704,
+              "src": "/media/sample-amber-fern/detail-960.webp",
+              "format": "webp",
+              "bytes": 14044
+            },
+            {
+              "width": 1440,
+              "height": 1056,
+              "src": "/media/sample-amber-fern/detail-1440.webp",
+              "format": "webp",
+              "bytes": 23034
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/detail-1500.webp",
+              "format": "webp",
+              "bytes": 24560
+            }
+          ],
+          "jpeg": [
+            {
+              "width": 960,
+              "height": 704,
+              "src": "/media/sample-amber-fern/detail-960.jpg",
+              "format": "jpeg",
+              "bytes": 33663
+            },
+            {
+              "width": 1440,
+              "height": 1056,
+              "src": "/media/sample-amber-fern/detail-1440.jpg",
+              "format": "jpeg",
+              "bytes": 55110
+            },
+            {
+              "width": 1500,
+              "height": 1100,
+              "src": "/media/sample-amber-fern/detail-1500.jpg",
+              "format": "jpeg",
+              "bytes": 57993
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "image-sample-cobalt-sky",
+      "slug": "sample-cobalt-sky",
+      "source": "sample/cobalt-sky.svg",
+      "sourceHash": "b87c410c3cde3ae1546d49f9acc49b032bb2d90c3620a0b12fa782f9f13150cf",
+      "width": 1600,
+      "height": 1000,
+      "format": "svg",
+      "collection": "featured",
+      "alt": "蓝色天空中穿过云层的光",
+      "caption": "蓝色天空",
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABIMDRANCxIQDhAUExIVGywdGxgYGzYnKSAsQDlEQz85Pj1HUGZXR0thTT0+WXlaYWltcnNyRVV9hnxvhWZwcm7/2wBDARMUFBsXGzQdHTRuST5Jbm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wgARCAAUACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHm6c7t8obF2cjAFzAl/8QAGRABAAMBAQAAAAAAAAAAAAAAAQAQIQIS/9oACAEBAAEFAjF0Deg9Tlooon//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAZEAABBQAAAAAAAAAAAAAAAAAAECEiMDH/2gAIAQEABj8CRyOU/wD/xAAbEAACAwADAAAAAAAAAAAAAAAAAREhMRBBUf/aAAgBAQABPyHYISo4U2L2zw6CFoy8EIJCH//aAAwDAQACAAMAAAAQoP8A/v/EABcRAQADAAAAAAAAAAAAAAAAAAEAECH/2gAIAQMBAT8QWa3/AP/EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQIBAT8QhUsZ/8QAHBABAQEBAAIDAAAAAAAAAAAAAQARIUFRMWFx/9oACAEBAAE/ENkPEPH9J4txaPBYhMPn7h9Eeb56nfqI8aQItGBhv//Z",
+      "variants": {
+        "thumb": {
+          "avif": [
+            {
+              "width": 480,
+              "height": 300,
+              "src": "/media/sample-cobalt-sky/thumb-480.avif",
+              "format": "avif",
+              "bytes": 1945
+            },
+            {
+              "width": 768,
+              "height": 480,
+              "src": "/media/sample-cobalt-sky/thumb-768.avif",
+              "format": "avif",
+              "bytes": 2706
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/thumb-1600.avif",
+              "format": "avif",
+              "bytes": 4941
+            }
+          ],
+          "webp": [
+            {
+              "width": 480,
+              "height": 300,
+              "src": "/media/sample-cobalt-sky/thumb-480.webp",
+              "format": "webp",
+              "bytes": 2344
+            },
+            {
+              "width": 768,
+              "height": 480,
+              "src": "/media/sample-cobalt-sky/thumb-768.webp",
+              "format": "webp",
+              "bytes": 4254
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/thumb-1600.webp",
+              "format": "webp",
+              "bytes": 11840
+            }
+          ],
+          "jpeg": [
+            {
+              "width": 480,
+              "height": 300,
+              "src": "/media/sample-cobalt-sky/thumb-480.jpg",
+              "format": "jpeg",
+              "bytes": 5458
+            },
+            {
+              "width": 768,
+              "height": 480,
+              "src": "/media/sample-cobalt-sky/thumb-768.jpg",
+              "format": "jpeg",
+              "bytes": 9242
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/thumb-1600.jpg",
+              "format": "jpeg",
+              "bytes": 21297
+            }
+          ]
+        },
+        "detail": {
+          "avif": [
+            {
+              "width": 960,
+              "height": 600,
+              "src": "/media/sample-cobalt-sky/detail-960.avif",
+              "format": "avif",
+              "bytes": 3227
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "src": "/media/sample-cobalt-sky/detail-1440.avif",
+              "format": "avif",
+              "bytes": 4526
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/detail-1600.avif",
+              "format": "avif",
+              "bytes": 4941
+            }
+          ],
+          "webp": [
+            {
+              "width": 960,
+              "height": 600,
+              "src": "/media/sample-cobalt-sky/detail-960.webp",
+              "format": "webp",
+              "bytes": 5864
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "src": "/media/sample-cobalt-sky/detail-1440.webp",
+              "format": "webp",
+              "bytes": 10250
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/detail-1600.webp",
+              "format": "webp",
+              "bytes": 11840
+            }
+          ],
+          "jpeg": [
+            {
+              "width": 960,
+              "height": 600,
+              "src": "/media/sample-cobalt-sky/detail-960.jpg",
+              "format": "jpeg",
+              "bytes": 11880
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "src": "/media/sample-cobalt-sky/detail-1440.jpg",
+              "format": "jpeg",
+              "bytes": 19256
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "src": "/media/sample-cobalt-sky/detail-1600.jpg",
+              "format": "jpeg",
+              "bytes": 21297
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

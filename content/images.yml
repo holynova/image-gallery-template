@@ -1,0 +1,9 @@
+images:
+  - source: "sample/cobalt-sky.svg"
+    collection: "featured"
+    alt: "蓝色天空中穿过云层的光"
+    caption: "蓝色天空"
+  - source: "sample/amber-fern.svg"
+    collection: "details"
+    alt: "暖色背景上的抽象蕨叶"
+    caption: "琥珀蕨叶"

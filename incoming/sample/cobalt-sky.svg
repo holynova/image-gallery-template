@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Cobalt sky</title>
+  <desc id="desc">A blue abstract sky with a soft beam of light.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1b45"/>
+      <stop offset="0.58" stop-color="#1d5da8"/>
+      <stop offset="1" stop-color="#9dd7e9"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <path d="M0 650c220-120 350-100 560-20s420 150 650 36c150-74 260-88 390-40v374H0Z" fill="#071735" fill-opacity="0.34"/>
+  <path d="M260 0h360l580 1000H830Z" fill="url(#beam)" opacity="0.36"/>
+  <circle cx="1240" cy="225" r="106" fill="#d8f4ff" opacity="0.66"/>
+</svg>

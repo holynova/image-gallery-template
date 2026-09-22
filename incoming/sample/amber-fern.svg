@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Amber fern</title>
+  <desc id="desc">An abstract fern silhouette over an amber gradient.</desc>
+  <defs>
+    <radialGradient id="ground" cx="48%" cy="42%" r="76%">
+      <stop offset="0" stop-color="#f7cc7b"/>
+      <stop offset="0.58" stop-color="#bd6b35"/>
+      <stop offset="1" stop-color="#351e2e"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1500" height="1100" fill="url(#ground)"/>
+  <ellipse cx="770" cy="440" rx="475" ry="350" fill="#ffe4a5" opacity="0.2" filter="url(#soft)"/>
+  <g fill="none" stroke="#2b2030" stroke-linecap="round">
+    <path d="M760 1040C748 770 786 472 760 150" stroke-width="26"/>
+    <path d="M760 790C604 676 490 554 364 360M764 700C913 602 1038 455 1122 266M757 580C631 511 535 422 470 308M770 470C872 410 947 333 1008 224" stroke-width="18"/>
+  </g>
+  <g fill="#31243a" opacity="0.92">
+    <ellipse cx="496" cy="473" rx="78" ry="24" transform="rotate(38 496 473)"/>
+    <ellipse cx="404" cy="360" rx="72" ry="22" transform="rotate(35 404 360)"/>
+    <ellipse cx="1010" cy="452" rx="78" ry="24" transform="rotate(-40 1010 452)"/>
+    <ellipse cx="1118" cy="282" rx="71" ry="22" transform="rotate(-43 1118 282)"/>
+    <ellipse cx="574" cy="516" rx="75" ry="22" transform="rotate(26 574 516)"/>
+    <ellipse cx="922" cy="540" rx="74" ry="22" transform="rotate(-30 922 540)"/>
+  </g>
+</svg>

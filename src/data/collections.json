@@ -1,0 +1,16 @@
+{
+  "collections": [
+    {
+      "id": "featured",
+      "title": "精选",
+      "description": "适合作为首页首屏的图片。",
+      "order": 0
+    },
+    {
+      "id": "details",
+      "title": "细节",
+      "description": "用更慢的节奏查看细节。",
+      "order": 1
+    }
+  ]
+}

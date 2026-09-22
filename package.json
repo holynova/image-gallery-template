@@ -1,0 +1,41 @@
+{
+  "name": "image-gallery-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reusable AI-native static image gallery template built with Astro and Sharp.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holynova/image-gallery-template.git"
+  },
+  "homepage": "https://image-gallery-template.xiaosang.cc/",
+  "scripts": {
+    "dev": "astro dev",
+    "images": "npm run ingest",
+    "ingest": "tsx scripts/ingest.ts",
+    "validate": "tsx scripts/validate.ts",
+    "check": "astro check",
+    "test": "vitest run",
+    "build": "npm run ingest && npm run validate && astro build",
+    "preview": "astro preview",
+    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist",
+    "setup-deploy": "tsx scripts/setup-deploy.ts"
+  },
+  "dependencies": {
+    "astro": "^7.3.3",
+    "js-yaml": "^4.1.0",
+    "sharp": "^0.35.4",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.3.0"
+  }
+}
