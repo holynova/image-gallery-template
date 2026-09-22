@@ -18,7 +18,7 @@
     "test": "vitest run",
     "build": "npm run ingest && npm run validate && astro build",
     "preview": "astro preview",
-    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist",
+    "deploy:cloudflare": "npm run build && npx wrangler deploy --config wrangler.toml --domains=image-gallery-template.xiaosang.cc",
     "setup-deploy": "tsx scripts/setup-deploy.ts"
   },
   "dependencies": {
