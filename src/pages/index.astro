@@ -26,8 +26,8 @@ const configJson = JSON.stringify({
         <p class="site-description">{site.description}</p>
       </div>
       <div class="site-header__actions">
-        <a class="repo-link" href="https://github.com/holynova/image-gallery-template" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-        <p class="image-count" aria-live="polite"><span id="visible-count">{initialImages.length}</span> / {manifest.images.length}</p>
+        <a class="repo-link" href="https://github.com/holynova/image-gallery-template" target="_blank" rel="noopener noreferrer">GitHub 源码</a>
+        <p class="image-count" aria-live="polite">已显示 <span id="visible-count">{initialImages.length}</span> 张，共 {manifest.images.length} 张</p>
       </div>
     </header>
 
@@ -48,6 +48,7 @@ const configJson = JSON.stringify({
     >
       {initialImages.map((image, index) => <GalleryCard image={image} index={index} />)}
     </section>
+    <p id="gallery-empty" class="gallery-empty" hidden>这个栏目还没有图片，换个栏目看看吧。</p>
     {remainingImages > 0 && <div id="gallery-sentinel" class="gallery-sentinel" aria-hidden="true"></div>}
     <button id="gallery-load-more" class="load-more" type="button" hidden={remainingImages === 0}>加载更多</button>
 

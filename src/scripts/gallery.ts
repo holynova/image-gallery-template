@@ -25,6 +25,7 @@ let currentImageId: string | undefined;
 let previouslyFocused: HTMLElement | null = null;
 
 const visibleCount = document.querySelector<HTMLElement>('#visible-count');
+const emptyState = document.querySelector<HTMLElement>('#gallery-empty');
 const sentinel = document.querySelector<HTMLElement>('#gallery-sentinel');
 const loadMore = document.querySelector<HTMLButtonElement>('#gallery-load-more');
 const closeButton = document.querySelector<HTMLButtonElement>('[data-lightbox-close]');
@@ -86,9 +87,10 @@ function createCard(image: ImageManifest, index: number): HTMLElement {
 }
 
 function updateVisibleCount(): void {
-  if (!visibleCount) return;
   const cards = [...gallery.querySelectorAll<HTMLElement>('[data-gallery-card]')];
-  visibleCount.textContent = String(cards.filter((card) => !card.hidden).length);
+  const visible = cards.filter((card) => !card.hidden).length;
+  if (visibleCount) visibleCount.textContent = String(visible);
+  if (emptyState) emptyState.hidden = visible > 0;
 }
 
 function applyFilter(): void {
@@ -155,7 +157,7 @@ function setLightboxImage(image: ImageManifest): void {
   if (lightboxCaption) lightboxCaption.textContent = image.caption || image.alt;
   const images = navigationImages();
   const index = images.findIndex((candidate) => candidate.id === image.id);
-  if (lightboxPosition) lightboxPosition.textContent = `${index + 1} / ${images.length}`;
+  if (lightboxPosition) lightboxPosition.textContent = `第 ${index + 1} 张，共 ${images.length} 张`;
   if (downloadLink) {
     downloadLink.href = toUrl(fallback.src);
     downloadLink.download = `${image.slug}.jpg`;
@@ -211,13 +213,32 @@ downloadLink?.addEventListener('click', () => {
     if (image) trackGalleryEvent('image_download', { image_id: image.id, collection: image.collection });
   }
 });
+function flashShareButton(text: string): void {
+  if (!shareButton) return;
+  const original = shareButton.textContent;
+  shareButton.textContent = text;
+  window.setTimeout(() => {
+    shareButton.textContent = original;
+  }, 2000);
+}
+
 shareButton?.addEventListener('click', async () => {
   const image = manifest.images.find((candidate) => candidate.id === currentImageId);
   if (!image) return;
   const shareData = { title: image.caption || image.alt, text: image.alt, url: window.location.href };
   try {
-    if (navigator.share) await navigator.share(shareData);
-    else if (navigator.clipboard) await navigator.clipboard.writeText(window.location.href);
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        flashShareButton('链接已复制');
+      } catch {
+        flashShareButton('复制失败，请手动复制链接');
+      }
+    } else {
+      flashShareButton('请手动复制地址栏链接');
+    }
     trackGalleryEvent('share_click', { image_id: image.id, collection: image.collection });
   } catch {
     // A cancelled native share is intentionally silent.
