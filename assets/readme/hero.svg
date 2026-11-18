@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">图片画廊模板 Image Gallery Template — 静态图片网站模板</title>
+  <desc id="desc">暖纸底编辑风标题：图片画廊模板，副标题准备图片，剩下的交给脚本；右侧是两张示例照片卡片（琥珀蕨叶与蓝色天空）与三格式标签 AVIF、WebP、JPEG。</desc>
+
+  <rect width="1200" height="360" rx="26" fill="#faf7f1"/>
+
+  <g id="title-block" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="56" y="62" font-size="19" letter-spacing="3" fill="#5f5648">静态图片画廊模板 · STATIC IMAGE GALLERY</text>
+    <text x="56" y="128" font-size="62" font-weight="700" fill="#1c1917">图片画廊模板</text>
+    <text x="56" y="168" font-size="23" fill="#44403c">IMAGE GALLERY TEMPLATE — 准备图片，剩下的交给脚本</text>
+    <text x="56" y="204" font-size="19" fill="#6b645e">三份 YAML 写内容，Sharp 自动生成响应式图片与画廊页面。</text>
+    <g id="chips" font-size="18" fill="#1c1917" text-anchor="middle">
+      <g><rect x="56" y="238" width="150" height="36" rx="18" fill="#ffffff" stroke="#d6d3cd" stroke-width="1.5"/><text x="131" y="262">Astro + Sharp</text></g>
+      <g><rect x="218" y="238" width="200" height="36" rx="18" fill="#ffffff" stroke="#d6d3cd" stroke-width="1.5"/><text x="318" y="262">AVIF · WebP · JPEG</text></g>
+      <g><rect x="430" y="238" width="150" height="36" rx="18" fill="#ffffff" stroke="#d6d3cd" stroke-width="1.5"/><text x="505" y="262">懒加载 · 灯箱</text></g>
+      <g><rect x="592" y="238" width="126" height="36" rx="18" fill="#ffffff" stroke="#d6d3cd" stroke-width="1.5"/><text x="655" y="262">Umami 可选</text></g>
+    </g>
+  </g>
+
+  <g id="frames" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <g id="frame-amber">
+      <rect x="792" y="44" width="168" height="212" rx="10" fill="#ffffff" stroke="#e7e2d8" stroke-width="1.5"/>
+      <rect x="802" y="54" width="148" height="168" rx="6" fill="#c2703a"/>
+      <ellipse cx="876" cy="138" rx="52" ry="60" fill="#e8a04c" opacity="0.85"/>
+      <g stroke="#2d1a12" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M876 206 L876 96"/>
+        <path d="M876 160 L838 122"/>
+        <path d="M876 140 L912 104"/>
+        <path d="M876 178 L842 150"/>
+      </g>
+      <g fill="#2d1a12">
+        <ellipse cx="836" cy="118" rx="12" ry="5" transform="rotate(-40 836 118)"/>
+        <ellipse cx="914" cy="100" rx="12" ry="5" transform="rotate(40 914 100)"/>
+        <ellipse cx="840" cy="148" rx="12" ry="5" transform="rotate(-40 840 148)"/>
+      </g>
+    </g>
+    <g id="frame-cobalt">
+      <rect x="976" y="44" width="168" height="212" rx="10" fill="#ffffff" stroke="#e7e2d8" stroke-width="1.5"/>
+      <rect x="986" y="54" width="148" height="168" rx="6" fill="#1d4ed8"/>
+      <circle cx="1096" cy="96" r="18" fill="#bfdbfe"/>
+      <path d="M986 190 Q1030 150 1060 178 Q1090 200 1134 170 L1134 222 L986 222 Z" fill="#2563eb"/>
+      <path d="M986 206 Q1034 178 1060 196 Q1092 214 1134 194 L1134 222 L986 222 Z" fill="#1e40af"/>
+      <path d="M1010 54 L1064 222 L1044 222 L990 54 Z" fill="#ffffff" opacity="0.18"/>
+    </g>
+    <g id="frame-captions" font-size="18" fill="#57534e" text-anchor="middle">
+      <text x="876" y="244">琥珀蕨叶</text>
+      <text x="1060" y="244">蓝色天空</text>
+    </g>
+    <g id="formats" font-size="18" fill="#57534e" text-anchor="middle">
+      <g><rect x="792" y="280" width="96" height="32" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/><text x="840" y="302">AVIF</text></g>
+      <g><rect x="904" y="280" width="104" height="32" rx="16" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/><text x="956" y="302">WebP</text></g>
+      <g><rect x="1024" y="280" width="96" height="32" rx="16" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/><text x="1072" y="302">JPEG</text></g>
+    </g>
+    <text x="968" y="342" font-size="18" fill="#6b645e" text-anchor="middle">incoming/ → ingest → 三格式响应式图片</text>
+  </g>
+</svg>
