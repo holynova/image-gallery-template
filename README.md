@@ -1,11 +1,13 @@
+<p align="right"><a href="README.en.md">English</a></p>
+
 <p align="center">
   <img src="./assets/readme/hero.svg" width="100%" alt="图片画廊模板 Image Gallery Template — 准备图片，剩下的交给脚本；右侧是两张示例照片卡片（琥珀蕨叶与蓝色天空）与 AVIF、WebP、JPEG 三格式标签">
 </p>
 
 <p align="center">
-  <a href="https://xiaosang.cc/image-gallery-template/">▶ 在线示例 Live Demo</a>
+  <a href="https://xiaosang.cc/image-gallery-template/">▶ 在线示例</a>
   ·
-  <a href="https://xiaosang.cc/image-gallery-template/guide">功能与用法说明 Guide</a>
+  <a href="https://xiaosang.cc/image-gallery-template/guide">功能与用法说明</a>
   ·
   <a href="https://holynova.github.io/image-gallery-template/">GitHub Pages</a>
   ·
@@ -14,15 +16,13 @@
 
 图片画廊模板是一个「图片优先、静态优先、AI 可协作」的图片网站模板：你只需要准备图片和三份内容配置，脚本就会自动生成响应式的 AVIF / WebP / JPEG 图片、画廊页面和静态产物。适合摄影集、旅行记录、作品集、产品图库、展览页面。
 
-Image Gallery Template is an image-first, static-first gallery template you can build with AI: drop in your photos, fill in three YAML files, and the scripts generate responsive AVIF / WebP / JPEG images, gallery pages, and the static site. Good for photo collections, travel journals, portfolios, product galleries, and exhibition pages.
-
-## 截图 / Screenshots
+## 截图
 
 <p align="center">
   <img src="./assets/readme/screenshot-gallery.png" width="720" alt="画廊首页：大标题「光影画廊」，栏目筛选（全部 / 精选 / 细节），两张示例照片——琥珀蕨叶与蓝色天空">
 </p>
 
-## 内置能力 / Features
+## 内置能力
 
 - **Sharp 图片处理**：自动生成 AVIF、WebP、JPEG 响应式版本，缩略图与灯箱大图多档宽度。
 - **画廊体验**：图片懒加载、首屏优先加载、批量渲染、栏目筛选、灯箱、键盘与触摸导航。
@@ -31,7 +31,7 @@ Image Gallery Template is an image-first, static-first gallery template you can 
 - **原图隔离**：原图只留在 `incoming/`，不会被复制到线上产物里。
 - **AI 协作**：内置 `.agents/skills/build-gallery` 技能与 `prompts/build-gallery.md`，可交给 AI 按流程建站。
 
-## 快速上手 / Quick Start
+## 快速上手
 
 环境要求：Node.js ≥ 20.3、npm。
 
@@ -81,7 +81,7 @@ npm run build     # 完整构建，产物写入 dist/
 
 **5. 发布**：内置 GitHub Pages 工作流，推送到 `master` 即自动构建发布；在仓库 Settings → Pages 选择 GitHub Actions 即可。
 
-## 技术 / Tech
+## 技术
 
 - Astro + Sharp + Zod + TypeScript，纯静态输出，零运行时服务。
 - 图片管线在 `scripts/`：`ingest.ts` 处理原图、`validate.ts` 做完整性校验、`image-pipeline.ts` 生成多格式多尺寸派生图。
@@ -100,14 +100,6 @@ tests/                  pipeline / schema / slug 测试（vitest）
 .agents/skills/         build-gallery 技能：AI 按流程建站
 ```
 
-## English
-
-**Image Gallery Template** turns photos + three YAML files into a fast static gallery site: Sharp generates responsive AVIF / WebP / JPEG derivatives, and Astro builds the pages. Originals stay in `incoming/` and never ship to production.
-
-- **Features**: lazy loading, first-screen priority, batch rendering, collection filters, lightbox, keyboard/touch navigation; validation of `alt` text, collections, sizes, hashes, and derived files; optional Umami analytics (page views + open/download/share events).
-- **Use it**: drop images into `incoming/`, fill in `content/site.yml`, `content/collections.yml`, `content/images.yml`, then `npm run ingest && npm run validate && npm run build`. Preview with `npm run dev` (default `http://localhost:4321/`). A GitHub Pages workflow ships with the template — push to `master` to publish.
-- **Tech**: Astro + Sharp + Zod + TypeScript, fully static output. Requires Node.js ≥ 20.3. Tests run on Vitest (`npm test`).
-
-## 许可 / License
+## 许可
 
 MIT，见 `LICENSE`。
